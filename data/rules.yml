@@ -1,0 +1,14 @@
+version: "3.1"
+
+rules:
+  - rule: Finished feedback
+    condition:
+        - active_loop: form_closing_feedback
+    steps:
+      - action: form_closing_feedback
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: utter_closing_share_feedback
+      - action: utter_closing_finally
+      - action: utter_closing_anything_else

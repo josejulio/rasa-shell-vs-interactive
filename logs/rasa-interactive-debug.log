@@ -1,0 +1,1187 @@
+$ rasa interactive --debug --model models/20231024-094719-rude-render.tar.gz
+/home/rasa/.local/share/virtualenvs/rasa-shell-vs-interactive-AZJUuaYc/lib64/python3.9/site-packages/rasa/core/tracker_store.py:1044: MovedIn20Warning: Deprecated API features detected! These feature(s) are not compatible with SQLAlchemy 2.0. To prevent incompatible upgrades prior to updating applications, ensure requirements files are pinned to "sqlalchemy<2.0". Set environment variable SQLALCHEMY_WARN_20=1 to show all deprecation warnings.  Set environment variable SQLALCHEMY_SILENCE_UBER_WARNING=1 to silence this message. (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+  Base: DeclarativeMeta = declarative_base()
+/home/rasa/.local/share/virtualenvs/rasa-shell-vs-interactive-AZJUuaYc/lib64/python3.9/site-packages/rasa/shared/utils/validation.py:134: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  import pkg_resources
+/home/rasa/.local/share/virtualenvs/rasa-shell-vs-interactive-AZJUuaYc/lib64/python3.9/site-packages/pkg_resources/__init__.py:2871: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('mpl_toolkits')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/rasa/.local/share/virtualenvs/rasa-shell-vs-interactive-AZJUuaYc/lib64/python3.9/site-packages/pkg_resources/__init__.py:2871: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('ruamel')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+2023-10-24 10:56:56 DEBUG    rasa.shared.nlu.training_data.loading  - Training data format of 'data/nlu.yml' is 'rasa_yml'.
+2023-10-24 10:56:56 DEBUG    rasa.shared.nlu.training_data.loading  - Training data format of 'data/rules.yml' is 'unk'.
+2023-10-24 10:56:56 DEBUG    rasa.shared.nlu.training_data.loading  - Training data format of 'data/stories.yml' is 'unk'.
+2023-10-24 10:56:56 INFO     rasa.cli.interactive  - Loading visualization data from ['data'].
+/home/rasa/.local/share/virtualenvs/rasa-shell-vs-interactive-AZJUuaYc/lib64/python3.9/site-packages/rasa/shared/core/slot_mappings.py:224: UserWarning: Slot auto-fill has been removed in 3.0 and replaced with a new explicit mechanism to set slots. Please refer to https://rasa.com/docs/rasa/domain#slots to learn more.
+  rasa.shared.utils.io.raise_warning(
+2023-10-24 10:56:57 DEBUG    h5py._conv  - Creating converter from 7 to 5
+2023-10-24 10:56:57 DEBUG    h5py._conv  - Creating converter from 5 to 7
+2023-10-24 10:56:57 DEBUG    h5py._conv  - Creating converter from 7 to 5
+2023-10-24 10:56:57 DEBUG    h5py._conv  - Creating converter from 5 to 7
+/home/rasa/.local/share/virtualenvs/rasa-shell-vs-interactive-AZJUuaYc/lib64/python3.9/site-packages/future/standard_library/__init__.py:65: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  import imp
+/home/rasa/.local/share/virtualenvs/rasa-shell-vs-interactive-AZJUuaYc/lib64/python3.9/site-packages/colorclass/codes.py:5: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Mapping
+/home/rasa/.local/share/virtualenvs/rasa-shell-vs-interactive-AZJUuaYc/lib64/python3.9/site-packages/sanic_cors/extension.py:39: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  SANIC_VERSION = LooseVersion(sanic_version)
+2023-10-24 10:56:58 DEBUG    rasa.core.utils  - Available web server routes:
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2023-10-24 10:56:58 DEBUG    rasa.telemetry  - Skipping telemetry reporting: no license hash found.
+2023-10-24 10:56:58 DEBUG    rasa.core.tracker_store  - Connected to InMemoryTrackerStore.
+2023-10-24 10:56:58 DEBUG    rasa.core.lock_store  - Connected to lock store 'InMemoryLockStore'.
+2023-10-24 10:56:58 DEBUG    rasa.core.nlg.generator  - Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2023-10-24 10:56:58 INFO     rasa.core.processor  - Loading model models/20231024-094719-rude-render.tar.gz...
+2023-10-24 10:56:59 DEBUG    rasa.engine.storage.local_model_storage  - Extracted model to '/tmp/tmp5qbe8cqr'.
+/home/rasa/.local/share/virtualenvs/rasa-shell-vs-interactive-AZJUuaYc/lib64/python3.9/site-packages/rasa/shared/core/slot_mappings.py:224: UserWarning: Slot auto-fill has been removed in 3.0 and replaced with a new explicit mechanism to set slots. Please refer to https://rasa.com/docs/rasa/domain#slots to learn more.
+  rasa.shared.utils.io.raise_warning(
+2023-10-24 10:56:59 DEBUG    rasa.engine.graph  - Node 'nlu_message_converter' loading 'NLUMessageConverter.load' and kwargs: '{}'.
+2023-10-24 10:56:59 DEBUG    rasa.engine.graph  - Node 'run_WhitespaceTokenizer0' loading 'WhitespaceTokenizer.load' and kwargs: '{}'.
+2023-10-24 10:56:59 DEBUG    rasa.engine.graph  - Node 'run_RegexFeaturizer1' loading 'RegexFeaturizer.load' and kwargs: '{}'.
+2023-10-24 10:56:59 DEBUG    rasa.engine.storage.local_model_storage  - Resource 'train_RegexFeaturizer1' was requested for reading.
+2023-10-24 10:56:59 DEBUG    rasa.engine.graph  - Node 'run_LexicalSyntacticFeaturizer2' loading 'LexicalSyntacticFeaturizer.load' and kwargs: '{}'.
+2023-10-24 10:56:59 DEBUG    rasa.engine.storage.local_model_storage  - Resource 'train_LexicalSyntacticFeaturizer2' was requested for reading.
+2023-10-24 10:56:59 DEBUG    rasa.engine.graph  - Node 'run_CountVectorsFeaturizer3' loading 'CountVectorsFeaturizer.load' and kwargs: '{}'.
+2023-10-24 10:56:59 DEBUG    rasa.engine.storage.local_model_storage  - Resource 'train_CountVectorsFeaturizer3' was requested for reading.
+2023-10-24 10:56:59 DEBUG    rasa.engine.graph  - Node 'run_CountVectorsFeaturizer4' loading 'CountVectorsFeaturizer.load' and kwargs: '{}'.
+2023-10-24 10:56:59 DEBUG    rasa.engine.storage.local_model_storage  - Resource 'train_CountVectorsFeaturizer4' was requested for reading.
+2023-10-24 10:56:59 DEBUG    rasa.engine.graph  - Node 'run_DIETClassifier5' loading 'DIETClassifier.load' and kwargs: '{}'.
+2023-10-24 10:56:59 DEBUG    rasa.engine.storage.local_model_storage  - Resource 'train_DIETClassifier5' was requested for reading.
+2023-10-24 10:56:59 DEBUG    rasa.utils.tensorflow.models  - Loading the model from /tmp/tmpbzg8pq87/train_DIETClassifier5/DIETClassifier.tf_model with finetune_mode=False...
+2023-10-24 10:56:59 DEBUG    rasa.nlu.classifiers.diet_classifier  - You specified 'DIET' to train entities, but no entities are present in the training data. Skipping training of entities.
+2023-10-24 10:56:59 DEBUG    rasa.nlu.classifiers.diet_classifier  - Following metrics will be logged during training:
+2023-10-24 10:56:59 DEBUG    rasa.nlu.classifiers.diet_classifier  -   t_loss (total loss)
+2023-10-24 10:56:59 DEBUG    rasa.nlu.classifiers.diet_classifier  -   i_acc (intent acc)
+2023-10-24 10:56:59 DEBUG    rasa.nlu.classifiers.diet_classifier  -   i_loss (intent loss)
+2023-10-24 10:57:07 DEBUG    rasa.utils.tensorflow.models  - Finished loading the model.
+2023-10-24 10:57:07 DEBUG    rasa.engine.graph  - Node 'run_EntitySynonymMapper6' loading 'EntitySynonymMapper.load' and kwargs: '{}'.
+2023-10-24 10:57:07 DEBUG    rasa.engine.storage.local_model_storage  - Resource 'train_EntitySynonymMapper6' was requested for reading.
+2023-10-24 10:57:07 DEBUG    rasa.nlu.extractors.entity_synonyms  - Failed to load ABCMeta from model storage. Resource 'train_EntitySynonymMapper6' doesn't exist.
+2023-10-24 10:57:07 DEBUG    rasa.engine.graph  - Node 'run_ResponseSelector7' loading 'ResponseSelector.load' and kwargs: '{}'.
+2023-10-24 10:57:07 DEBUG    rasa.engine.storage.local_model_storage  - Resource 'train_ResponseSelector7' was requested for reading.
+2023-10-24 10:57:07 DEBUG    rasa.nlu.classifiers.diet_classifier  - Failed to load ABCMeta from model storage. Resource 'train_ResponseSelector7' doesn't exist.
+2023-10-24 10:57:07 DEBUG    rasa.engine.storage.local_model_storage  - Resource 'train_ResponseSelector7' was requested for reading.
+2023-10-24 10:57:07 DEBUG    rasa.nlu.selectors.response_selector  - Failed to load ResponseSelector from model storage. Resource 'train_ResponseSelector7' doesn't exist.
+2023-10-24 10:57:07 DEBUG    rasa.engine.graph  - Node 'run_FallbackClassifier8' loading 'FallbackClassifier.load' and kwargs: '{}'.
+2023-10-24 10:57:07 DEBUG    rasa.engine.graph  - Node 'run_RegexMessageHandler' loading 'RegexMessageHandler.load' and kwargs: '{}'.
+2023-10-24 10:57:07 DEBUG    rasa.engine.graph  - Node 'domain_provider' loading 'DomainProvider.load' and kwargs: '{}'.
+2023-10-24 10:57:07 DEBUG    rasa.engine.storage.local_model_storage  - Resource 'domain_provider' was requested for reading.
+2023-10-24 10:57:07 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' loading 'MemoizationPolicy.load' and kwargs: '{}'.
+2023-10-24 10:57:07 DEBUG    rasa.engine.storage.local_model_storage  - Resource 'train_MemoizationPolicy0' was requested for reading.
+2023-10-24 10:57:07 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' loading 'RulePolicy.load' and kwargs: '{}'.
+2023-10-24 10:57:07 DEBUG    rasa.engine.storage.local_model_storage  - Resource 'train_RulePolicy1' was requested for reading.
+2023-10-24 10:57:07 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' loading 'TEDPolicy.load' and kwargs: '{}'.
+2023-10-24 10:57:07 DEBUG    rasa.engine.storage.local_model_storage  - Resource 'train_TEDPolicy2' was requested for reading.
+2023-10-24 10:57:07 DEBUG    rasa.utils.tensorflow.models  - Loading the model from /tmp/tmpbzg8pq87/train_TEDPolicy2/ted_policy.tf_model with finetune_mode=False...
+2023-10-24 10:57:16 DEBUG    rasa.utils.tensorflow.models  - Finished loading the model.
+2023-10-24 10:57:16 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' loading 'RuleOnlyDataProvider.load' and kwargs: '{}'.
+2023-10-24 10:57:16 DEBUG    rasa.engine.storage.local_model_storage  - Resource 'train_RulePolicy1' was requested for reading.
+2023-10-24 10:57:16 DEBUG    rasa.engine.graph  - Node 'select_prediction' loading 'DefaultPolicyPredictionEnsemble.load' and kwargs: '{}'.
+2023-10-24 10:57:16 INFO     root  - Rasa server is up and running.
+2023-10-24 10:57:16 INFO     root  - Enabling coroutine debugging. Loop id 94863272650256.
+/home/rasa/.local/share/virtualenvs/rasa-shell-vs-interactive-AZJUuaYc/lib64/python3.9/site-packages/rasa/shared/core/slot_mappings.py:224: UserWarning: Slot auto-fill has been removed in 3.0 and replaced with a new explicit mechanism to set slots. Please refer to https://rasa.com/docs/rasa/domain#slots to learn more.
+  rasa.shared.utils.io.raise_warning(
+2023-10-24 10:57:16 DEBUG    rasa.shared.core.generator  - Number of augmentation rounds is 0
+2023-10-24 10:57:16 DEBUG    rasa.shared.core.generator  - Starting data generation round 0 ... (with 1 trackers)
+Processed story blocks: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 2825.59it/s, # trackers=1]
+2023-10-24 10:57:16 DEBUG    rasa.shared.core.generator  - Finished phase (5 training samples found).
+2023-10-24 10:57:16 DEBUG    rasa.shared.core.generator  - Data generation rounds finished.
+2023-10-24 10:57:16 DEBUG    rasa.shared.core.generator  - Found 0 unused checkpoints
+2023-10-24 10:57:16 DEBUG    rasa.shared.core.generator  - Found 5 training trackers.
+2023-10-24 10:57:16 DEBUG    rasa.shared.core.generator  - Starting data generation round 0 ... (with 1 trackers)
+Processed rules: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 1573.26it/s, # trackers=1]
+2023-10-24 10:57:16 DEBUG    rasa.shared.core.generator  - Finished phase (1 training samples found).
+2023-10-24 10:57:16 DEBUG    rasa.shared.core.generator  - Data generation rounds finished.
+2023-10-24 10:57:16 DEBUG    rasa.shared.core.generator  - Found 0 unused checkpoints
+2023-10-24 10:57:16 DEBUG    rasa.shared.core.generator  - Found 1 training trackers.
+2023-10-24 10:57:16 DEBUG    rasa.core.tracker_store  - Could not find tracker for conversation ID 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:57:16 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:57:16 DEBUG    rasa.core.processor  - Starting a new session for conversation ID 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:57:16 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:57:16 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=action_session_start rasa_events=[<rasa.shared.core.events.SessionStarted object at 0x7fcc8df7aa60>, ActionExecuted(action: action_listen, policy: None, confidence: None)]
+2023-10-24 10:57:16 DEBUG    rasa.core.processor  - [debug    ] processor.slots.log            slot_values=     closing_feedback: None
+        requested_slot: None
+        session_started_metadata: None
+Bot loaded. Visualisation at http://localhost:5006/visualization.html .
+Type a message and press enter (press 'Ctrl-c' to exit).
+2023-10-24 10:57:16 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:57:16 DEBUG    rasa.core.processor  - Starting a new session for conversation ID 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:57:16 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:57:16 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=action_session_start rasa_events=[<rasa.shared.core.events.SessionStarted object at 0x7fcc8d1934f0>, ActionExecuted(action: action_listen, policy: None, confidence: None)]
+2023-10-24 10:57:16 DEBUG    rasa.core.processor  - [debug    ] processor.slots.log            slot_values=     closing_feedback: None
+        requested_slot: None
+        session_started_metadata: None
+? Your input -> are you a human?
+2023-10-24 10:58:28 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:28 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:28 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:28 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:28 DEBUG    rasa.core.processor  - Starting a new session for conversation ID 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:28 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:58:28 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=action_session_start rasa_events=[<rasa.shared.core.events.SessionStarted object at 0x7fcc8e128dc0>, ActionExecuted(action: action_listen, policy: None, confidence: None)]
+2023-10-24 10:58:28 DEBUG    rasa.core.processor  - [debug    ] processor.slots.log            slot_values=     closing_feedback: None
+        requested_slot: None
+        session_started_metadata: None
+2023-10-24 10:58:28 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x7fcc8e0f5df0>], '__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc8e0f5490>}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:58:28 DEBUG    rasa.engine.graph  - Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2023-10-24 10:58:28 DEBUG    rasa.engine.graph  - Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2023-10-24 10:58:28 DEBUG    rasa.engine.graph  - Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2023-10-24 10:58:28 DEBUG    rasa.engine.graph  - Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2023-10-24 10:58:28 DEBUG    rasa.engine.graph  - Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2023-10-24 10:58:28 DEBUG    rasa.engine.graph  - Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2023-10-24 10:58:28 DEBUG    rasa.engine.graph  - Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2023-10-24 10:58:28 DEBUG    rasa.engine.graph  - Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2023-10-24 10:58:28 DEBUG    rasa.engine.graph  - Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2023-10-24 10:58:28 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2023-10-24 10:58:28 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2023-10-24 10:58:28 DEBUG    rasa.engine.graph  - Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2023-10-24 10:58:28 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:58:28 DEBUG    rasa.engine.graph  - Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2023-10-24 10:58:28 DEBUG    rasa.core.processor  - [debug    ] processor.message.parse        parse_data_entities=[] parse_data_intent={'name': 'intent_live_chat', 'confidence': 0.999998927116394} parse_data_text=are you a human?
+2023-10-24 10:58:28 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 4 events.
+2023-10-24 10:58:28 DEBUG    rasa.core.actions.action  - Validating extracted slots:
+2023-10-24 10:58:28 DEBUG    rasa.core.processor  - [debug    ] processor.extract.slots        action_extract_slot=action_extract_slots len_extraction_events=0 rasa_events=[]
+2023-10-24 10:58:28 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:58:28 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:28 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? Your NLU model classified 'are you a human?' with intent 'intent_live_chat' and there are no entities, is this correct? Yes
+2023-10-24 10:58:30 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:30 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:30 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc8d1bb310>}, targets: ['select_prediction'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:58:30 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2023-10-24 10:58:30 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:58:30 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2023-10-24 10:58:30 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'action_listen'}}]
+2023-10-24 10:58:30 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'utter_live_chat'
+2023-10-24 10:58:30 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2023-10-24 10:58:30 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user text: are you a human? | previous action name: action_listen
+2023-10-24 10:58:30 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2023-10-24 10:58:30 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: intent_live_chat | previous action name: action_listen
+2023-10-24 10:58:30 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2023-10-24 10:58:30 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2023-10-24 10:58:30 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_live_chat' based on user intent.
+2023-10-24 10:58:30 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2023-10-24 10:58:30 DEBUG    rasa.core.policies.ensemble  - Made prediction using user intent.
+2023-10-24 10:58:30 DEBUG    rasa.core.policies.ensemble  - Added `DefinePrevUserUtteredFeaturization(False)` event.
+2023-10-24 10:58:30 DEBUG    rasa.core.policies.ensemble  - Predicted next action using MemoizationPolicy.
+2023-10-24 10:58:30 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:58:30 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+------
+Chat History
+
+ #    Bot                                   You
+───────────────────────────────────────────────────────
+ 1    action_listen
+───────────────────────────────────────────────────────
+ 2                                    are you a human?
+                         intent: intent_live_chat 1.00
+
+
+Current slots:
+        closing_feedback: None, requested_slot: None, session_started_metadata: None
+
+------
+2023-10-24 10:58:30 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? The bot wants to run 'utter_live_chat', correct? Yes
+2023-10-24 10:58:32 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:32 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+/home/rasa/.local/share/virtualenvs/rasa-shell-vs-interactive-AZJUuaYc/lib64/python3.9/site-packages/rasa/server.py:860: FutureWarning: The "POST /conversations/<conversation_id>/execute" endpoint is deprecated. Inserting actions to the tracker externally should be avoided. Actions should be predicted by the policies only.
+  rasa.shared.utils.io.raise_warning(
+2023-10-24 10:58:32 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:32 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:32 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:32 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:32 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:32 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:58:32 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=utter_live_chat rasa_events=[BotUttered('I don't support live chat, but you can leave feedback for my team to review.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_live_chat"}, 1698166712.3647904)]
+2023-10-24 10:58:32 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:58:32 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:32 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:32 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:32 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:32 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc8cf09910>}, targets: ['select_prediction'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:58:32 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2023-10-24 10:58:32 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:58:32 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2023-10-24 10:58:32 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat'}}]
+2023-10-24 10:58:32 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'utter_live_chat_feedback'
+2023-10-24 10:58:32 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2023-10-24 10:58:32 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: intent_live_chat | previous action name: action_listen
+[state 2] user intent: intent_live_chat | previous action name: utter_live_chat
+2023-10-24 10:58:32 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2023-10-24 10:58:32 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2023-10-24 10:58:32 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_live_chat_feedback' based on user intent.
+2023-10-24 10:58:32 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2023-10-24 10:58:32 DEBUG    rasa.core.policies.ensemble  - Predicted next action using MemoizationPolicy.
+2023-10-24 10:58:32 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:58:32 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                   are you a human?
+                                                                                        intent: intent_live_chat 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_live_chat 1.00
+      I don't support live chat, but you can leave feedback for my team to review.
+
+
+Current slots:
+        closing_feedback: None, requested_slot: None, session_started_metadata: None
+
+------
+2023-10-24 10:58:32 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? The bot wants to run 'utter_live_chat_feedback', correct? Yes
+2023-10-24 10:58:34 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:34 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:34 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:34 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:34 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:34 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:34 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:34 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:58:34 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=utter_live_chat_feedback rasa_events=[BotUttered('Would you like to submit any feedback?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_live_chat_feedback"}, 1698166714.407198)]
+2023-10-24 10:58:34 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:58:34 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:34 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:34 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:34 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:34 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc8e0a8ca0>}, targets: ['select_prediction'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:58:34 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2023-10-24 10:58:34 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:58:34 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2023-10-24 10:58:34 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat_feedback'}}]
+2023-10-24 10:58:34 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'action_listen'
+2023-10-24 10:58:34 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2023-10-24 10:58:34 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: intent_live_chat | previous action name: action_listen
+[state 2] user intent: intent_live_chat | previous action name: utter_live_chat
+[state 3] user intent: intent_live_chat | previous action name: utter_live_chat_feedback
+2023-10-24 10:58:34 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2023-10-24 10:58:34 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2023-10-24 10:58:34 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'action_listen' based on user intent.
+2023-10-24 10:58:34 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2023-10-24 10:58:34 DEBUG    rasa.core.policies.ensemble  - Predicted next action using MemoizationPolicy.
+2023-10-24 10:58:34 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:58:34 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                   are you a human?
+                                                                                        intent: intent_live_chat 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_live_chat 1.00
+      I don't support live chat, but you can leave feedback for my team to review.
+      utter_live_chat_feedback 1.00
+      Would you like to submit any feedback?
+
+
+Current slots:
+        closing_feedback: None, requested_slot: None, session_started_metadata: None
+
+------
+2023-10-24 10:58:34 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? The bot wants to run 'action_listen', correct? Yes
+2023-10-24 10:58:35 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:35 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:35 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:35 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:35 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:35 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:35 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:35 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:58:35 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=action_listen rasa_events=[]
+2023-10-24 10:58:35 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:58:35 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:35 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:35 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:35 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? Your input -> yes
+2023-10-24 10:58:39 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:39 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:39 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:39 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:39 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x7fcc8c412190>], '__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc8c4029d0>}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:58:39 DEBUG    rasa.engine.graph  - Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2023-10-24 10:58:39 DEBUG    rasa.engine.graph  - Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2023-10-24 10:58:39 DEBUG    rasa.engine.graph  - Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2023-10-24 10:58:39 DEBUG    rasa.engine.graph  - Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2023-10-24 10:58:39 DEBUG    rasa.engine.graph  - Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2023-10-24 10:58:39 DEBUG    rasa.engine.graph  - Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2023-10-24 10:58:39 DEBUG    rasa.engine.graph  - Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2023-10-24 10:58:39 DEBUG    rasa.engine.graph  - Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2023-10-24 10:58:39 DEBUG    rasa.engine.graph  - Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2023-10-24 10:58:39 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2023-10-24 10:58:39 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2023-10-24 10:58:39 DEBUG    rasa.engine.graph  - Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2023-10-24 10:58:39 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:58:39 DEBUG    rasa.engine.graph  - Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2023-10-24 10:58:39 DEBUG    rasa.core.processor  - [debug    ] processor.message.parse        parse_data_entities=[] parse_data_intent={'name': 'intent_core_yes', 'confidence': 1.0} parse_data_text=yes
+2023-10-24 10:58:39 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 10 events.
+2023-10-24 10:58:39 DEBUG    rasa.core.actions.action  - Validating extracted slots:
+2023-10-24 10:58:39 DEBUG    rasa.core.processor  - [debug    ] processor.extract.slots        action_extract_slot=action_extract_slots len_extraction_events=0 rasa_events=[]
+2023-10-24 10:58:39 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:58:39 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:39 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? Your NLU model classified 'yes' with intent 'intent_core_yes' and there are no entities, is this correct? Yes
+2023-10-24 10:58:41 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:41 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:41 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc8e837610>}, targets: ['select_prediction'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:58:41 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2023-10-24 10:58:41 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:58:41 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2023-10-24 10:58:41 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'action_listen'}}]
+2023-10-24 10:58:41 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2023-10-24 10:58:41 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2023-10-24 10:58:41 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: intent_live_chat | previous action name: action_listen
+[state 2] user intent: intent_live_chat | previous action name: utter_live_chat
+[state 3] user intent: intent_live_chat | previous action name: utter_live_chat_feedback
+[state 4] user text: yes | previous action name: action_listen
+2023-10-24 10:58:41 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2023-10-24 10:58:41 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: intent_live_chat | previous action name: action_listen
+[state 2] user intent: intent_live_chat | previous action name: utter_live_chat
+[state 3] user intent: intent_live_chat | previous action name: utter_live_chat_feedback
+[state 4] user intent: intent_core_yes | previous action name: action_listen
+2023-10-24 10:58:41 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2023-10-24 10:58:41 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2023-10-24 10:58:41 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_closing_type_below' based on user intent.
+2023-10-24 10:58:41 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2023-10-24 10:58:41 DEBUG    rasa.core.policies.ensemble  - Made prediction using user intent.
+2023-10-24 10:58:41 DEBUG    rasa.core.policies.ensemble  - Added `DefinePrevUserUtteredFeaturization(False)` event.
+2023-10-24 10:58:41 DEBUG    rasa.core.policies.ensemble  - Predicted next action using TEDPolicy.
+2023-10-24 10:58:41 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:58:41 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                   are you a human?
+                                                                                        intent: intent_live_chat 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_live_chat 1.00
+      I don't support live chat, but you can leave feedback for my team to review.
+      utter_live_chat_feedback 1.00
+      Would you like to submit any feedback?
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                                                yes
+                                                                                         intent: intent_core_yes 1.00
+
+
+Current slots:
+        closing_feedback: None, requested_slot: None, session_started_metadata: None
+
+------
+2023-10-24 10:58:41 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? The bot wants to run 'utter_closing_type_below', correct? Yes
+2023-10-24 10:58:43 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:43 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:43 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:43 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:43 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:43 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:43 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:43 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:58:43 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=utter_closing_type_below rasa_events=[BotUttered('Great. You can type in your feedback below and I'll share it with my team.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_closing_type_below"}, 1698166723.5913782)]
+2023-10-24 10:58:43 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:58:43 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:43 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:43 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:43 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:43 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc8c324dc0>}, targets: ['select_prediction'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:58:43 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2023-10-24 10:58:43 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:58:43 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2023-10-24 10:58:43 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'utter_closing_type_below'}}]
+2023-10-24 10:58:43 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2023-10-24 10:58:43 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2023-10-24 10:58:43 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: intent_live_chat | previous action name: action_listen
+[state 2] user intent: intent_live_chat | previous action name: utter_live_chat
+[state 3] user intent: intent_live_chat | previous action name: utter_live_chat_feedback
+[state 4] user intent: intent_core_yes | previous action name: action_listen
+[state 5] user intent: intent_core_yes | previous action name: utter_closing_type_below
+2023-10-24 10:58:43 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2023-10-24 10:58:43 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2023-10-24 10:58:43 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'form_closing_feedback' based on user intent.
+2023-10-24 10:58:43 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2023-10-24 10:58:43 DEBUG    rasa.core.policies.ensemble  - Predicted next action using TEDPolicy.
+2023-10-24 10:58:43 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:58:43 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                   are you a human?
+                                                                                        intent: intent_live_chat 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_live_chat 1.00
+      I don't support live chat, but you can leave feedback for my team to review.
+      utter_live_chat_feedback 1.00
+      Would you like to submit any feedback?
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                                                yes
+                                                                                         intent: intent_core_yes 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    utter_closing_type_below 0.93
+      Great. You can type in your feedback below and I'll share it with my team.
+
+
+Current slots:
+        closing_feedback: None, requested_slot: None, session_started_metadata: None
+
+------
+2023-10-24 10:58:43 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? The bot wants to run 'form_closing_feedback', correct? Yes
+2023-10-24 10:58:44 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:44 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:44 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:44 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:44 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:44 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:44 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:44 DEBUG    rasa.core.actions.forms  - Activated the form 'form_closing_feedback'.
+2023-10-24 10:58:44 DEBUG    rasa.core.actions.forms  - Executing default action 'action_extract_slots' at form activation.
+2023-10-24 10:58:44 DEBUG    rasa.core.actions.action  - Validating extracted slots:
+2023-10-24 10:58:44 DEBUG    rasa.core.actions.forms  - The execution of 'action_extract_slots' resulted in these events: .
+2023-10-24 10:58:44 DEBUG    rasa.core.actions.forms  - No pre-filled required slots to validate.
+2023-10-24 10:58:44 DEBUG    rasa.core.actions.forms  - There is no validation action 'validate_form_closing_feedback' to execute at form activation.
+2023-10-24 10:58:44 DEBUG    rasa.core.actions.forms  - [debug    ] forms.validation.required      tracker_latest_message=<rasa.shared.core.events.UserUttered object at 0x7fcc8c1519a0>
+2023-10-24 10:58:44 DEBUG    rasa.core.actions.forms  - [debug    ] forms.slots.validate           slot_candidates={}
+2023-10-24 10:58:44 DEBUG    rasa.core.actions.forms  - Request next slot 'closing_feedback'
+2023-10-24 10:58:44 DEBUG    rasa.core.actions.forms  - There was no action found to ask for slot 'closing_feedback' name to be filled.
+2023-10-24 10:58:44 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:58:44 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=form_closing_feedback rasa_events=[<rasa.shared.core.events.ActiveLoop object at 0x7fcc8c0a2430>, SlotSet(key: requested_slot, value: closing_feedback)]
+2023-10-24 10:58:44 DEBUG    rasa.core.processor  - [debug    ] processor.slots.log            slot_values=     closing_feedback: None
+        requested_slot: closing_feedback
+        session_started_metadata: None
+2023-10-24 10:58:44 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:58:44 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:44 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:44 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:44 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:44 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc8c0a2820>}, targets: ['select_prediction'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:58:44 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2023-10-24 10:58:44 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:58:44 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2023-10-24 10:58:44 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'utter_closing_type_below'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'form_closing_feedback'}, 'active_loop': {'name': 'form_closing_feedback'}}]
+2023-10-24 10:58:44 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2023-10-24 10:58:44 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2023-10-24 10:58:44 DEBUG    rasa.core.policies.rule_policy  - Predicted 'action_listen' after loop 'form_closing_feedback'.
+2023-10-24 10:58:44 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2023-10-24 10:58:44 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'action_listen' based on user intent.
+2023-10-24 10:58:44 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2023-10-24 10:58:44 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2023-10-24 10:58:44 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:58:44 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                   are you a human?
+                                                                                        intent: intent_live_chat 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_live_chat 1.00
+      I don't support live chat, but you can leave feedback for my team to review.
+      utter_live_chat_feedback 1.00
+      Would you like to submit any feedback?
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                                                yes
+                                                                                         intent: intent_core_yes 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    utter_closing_type_below 0.93
+      Great. You can type in your feedback below and I'll share it with my team.
+      form_closing_feedback 0.92
+      active_loop{"name": "form_closing_feedback"}
+      slot{"requested_slot": "closing_feedback"}
+
+
+Current slots:
+        closing_feedback: None, requested_slot: closing_feedback, session_started_metadata: None
+
+------
+2023-10-24 10:58:44 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? The bot wants to run 'action_listen', correct? Yes
+2023-10-24 10:58:45 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:45 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:45 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:45 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:45 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:45 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:45 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:45 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:58:45 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=action_listen rasa_events=[]
+2023-10-24 10:58:45 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:58:45 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:58:45 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:45 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:58:45 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? Your input -> stuff
+2023-10-24 10:59:41 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:41 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:41 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:41 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:41 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x7fcc71e66640>], '__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc71e2f880>}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:59:41 DEBUG    rasa.engine.graph  - Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2023-10-24 10:59:41 DEBUG    rasa.engine.graph  - Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2023-10-24 10:59:41 DEBUG    rasa.engine.graph  - Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2023-10-24 10:59:41 DEBUG    rasa.engine.graph  - Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2023-10-24 10:59:41 DEBUG    rasa.engine.graph  - Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2023-10-24 10:59:41 DEBUG    rasa.engine.graph  - Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2023-10-24 10:59:41 DEBUG    rasa.engine.graph  - Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2023-10-24 10:59:41 DEBUG    rasa.engine.graph  - Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2023-10-24 10:59:41 DEBUG    rasa.engine.graph  - Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2023-10-24 10:59:41 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2023-10-24 10:59:41 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2023-10-24 10:59:41 DEBUG    rasa.engine.graph  - Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2023-10-24 10:59:41 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:59:41 DEBUG    rasa.engine.graph  - Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2023-10-24 10:59:41 DEBUG    rasa.core.processor  - [debug    ] processor.message.parse        parse_data_entities=[] parse_data_intent={'name': 'intent_core_yes', 'confidence': 0.9992247819900513} parse_data_text=stuff
+2023-10-24 10:59:41 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 17 events.
+2023-10-24 10:59:41 DEBUG    rasa.core.actions.action  - Validating extracted slots: closing_feedback
+2023-10-24 10:59:41 DEBUG    rasa.core.processor  - [debug    ] processor.extract.slots        action_extract_slot=action_extract_slots len_extraction_events=1 rasa_events=[SlotSet(key: closing_feedback, value: stuff)]
+2023-10-24 10:59:41 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:41 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:41 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? Your NLU model classified 'stuff' with intent 'intent_core_yes' and there are no entities, is this correct? Yes
+2023-10-24 10:59:43 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:43 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:43 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc71d76160>}, targets: ['select_prediction'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:59:43 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2023-10-24 10:59:43 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:59:43 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2023-10-24 10:59:43 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'utter_closing_type_below'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'form_closing_feedback'}, 'active_loop': {'name': 'form_closing_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'action_listen'}, 'active_loop': {'name': 'form_closing_feedback'}}]
+2023-10-24 10:59:43 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2023-10-24 10:59:43 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2023-10-24 10:59:43 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: intent_live_chat | previous action name: action_listen
+[state 2] user intent: intent_live_chat | previous action name: utter_live_chat
+[state 3] user intent: intent_live_chat | previous action name: utter_live_chat_feedback
+[state 4] user intent: intent_core_yes | previous action name: action_listen
+[state 5] user intent: intent_core_yes | previous action name: utter_closing_type_below
+[state 6] user intent: intent_core_yes | previous action name: form_closing_feedback | active loop: {'name': 'form_closing_feedback'}
+[state 7] user text: stuff | previous action name: action_listen | active loop: {'name': 'form_closing_feedback'} | slots: {'closing_feedback': (1.0,)}
+2023-10-24 10:59:43 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2023-10-24 10:59:43 DEBUG    rasa.core.policies.rule_policy  - Predicted loop 'form_closing_feedback'.
+2023-10-24 10:59:43 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2023-10-24 10:59:43 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_closing_type_below' based on user intent.
+2023-10-24 10:59:43 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2023-10-24 10:59:43 DEBUG    rasa.core.policies.ensemble  - Made prediction using user intent.
+2023-10-24 10:59:43 DEBUG    rasa.core.policies.ensemble  - Added `DefinePrevUserUtteredFeaturization(False)` event.
+2023-10-24 10:59:43 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2023-10-24 10:59:43 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:43 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                   are you a human?
+                                                                                        intent: intent_live_chat 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_live_chat 1.00
+      I don't support live chat, but you can leave feedback for my team to review.
+      utter_live_chat_feedback 1.00
+      Would you like to submit any feedback?
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                                                yes
+                                                                                         intent: intent_core_yes 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    utter_closing_type_below 0.93
+      Great. You can type in your feedback below and I'll share it with my team.
+      form_closing_feedback 0.92
+      active_loop{"name": "form_closing_feedback"}
+      slot{"requested_slot": "closing_feedback"}
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                              stuff
+                                                                                         intent: intent_core_yes 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    slot{"closing_feedback": "stuff"}
+
+
+Current slots:
+        closing_feedback: stuff, requested_slot: closing_feedback, session_started_metadata: None
+
+------
+2023-10-24 10:59:43 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? The bot wants to run 'form_closing_feedback', correct? Yes
+2023-10-24 10:59:48 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:48 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:48 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:48 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:48 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:48 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:48 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:48 DEBUG    rasa.core.actions.forms  - [debug    ] forms.validation.required      tracker_latest_message=<rasa.shared.core.events.UserUttered object at 0x7fcc71c5cee0>
+2023-10-24 10:59:48 DEBUG    rasa.core.actions.forms  - [debug    ] forms.slots.validate           slot_candidates={'closing_feedback': 'stuff'}
+2023-10-24 10:59:48 DEBUG    rasa.core.actions.forms  - Deactivating the form 'form_closing_feedback'
+2023-10-24 10:59:48 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:59:48 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=form_closing_feedback rasa_events=[SlotSet(key: requested_slot, value: None), <rasa.shared.core.events.ActiveLoop object at 0x7fcc71b99100>]
+2023-10-24 10:59:48 DEBUG    rasa.core.processor  - [debug    ] processor.slots.log            slot_values=     closing_feedback: stuff
+        requested_slot: None
+        session_started_metadata: None
+2023-10-24 10:59:48 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:48 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:48 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:48 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:48 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:48 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc71b0c040>}, targets: ['select_prediction'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:59:48 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2023-10-24 10:59:48 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:59:48 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2023-10-24 10:59:48 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'utter_closing_type_below'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'form_closing_feedback'}}]
+2023-10-24 10:59:48 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2023-10-24 10:59:48 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2023-10-24 10:59:48 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: intent_live_chat | previous action name: action_listen
+[state 2] user intent: intent_live_chat | previous action name: utter_live_chat
+[state 3] user intent: intent_live_chat | previous action name: utter_live_chat_feedback
+[state 4] user intent: intent_core_yes | previous action name: action_listen
+[state 5] user intent: intent_core_yes | previous action name: utter_closing_type_below
+[state 6] user intent: intent_core_yes | previous action name: form_closing_feedback | slots: {'closing_feedback': (1.0,)}
+2023-10-24 10:59:48 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'utter_closing_share_feedback'.
+2023-10-24 10:59:48 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2023-10-24 10:59:48 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'action_listen' based on user intent.
+2023-10-24 10:59:48 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2023-10-24 10:59:48 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2023-10-24 10:59:48 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:48 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                   are you a human?
+                                                                                        intent: intent_live_chat 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_live_chat 1.00
+      I don't support live chat, but you can leave feedback for my team to review.
+      utter_live_chat_feedback 1.00
+      Would you like to submit any feedback?
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                                                yes
+                                                                                         intent: intent_core_yes 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    utter_closing_type_below 0.93
+      Great. You can type in your feedback below and I'll share it with my team.
+      form_closing_feedback 0.92
+      active_loop{"name": "form_closing_feedback"}
+      slot{"requested_slot": "closing_feedback"}
+      slot{"closing_feedback": "stuff"}
+      slot{"requested_slot": null}
+      active_loop{"name": null}
+
+
+Current slots:
+        closing_feedback: stuff, requested_slot: None, session_started_metadata: None
+
+------
+2023-10-24 10:59:49 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? The bot wants to run 'utter_closing_share_feedback', correct? Yes
+2023-10-24 10:59:49 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:49 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:49 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:49 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:49 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:49 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:49 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:49 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:59:49 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=utter_closing_share_feedback rasa_events=[BotUttered(' I'll share that with my team to review.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_closing_share_feedback"}, 1698166789.9226937)]
+2023-10-24 10:59:49 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:49 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:49 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:49 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:49 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:49 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc719d07f0>}, targets: ['select_prediction'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:59:49 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2023-10-24 10:59:49 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:59:49 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2023-10-24 10:59:49 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'utter_closing_type_below'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'form_closing_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'utter_closing_share_feedback'}}]
+2023-10-24 10:59:49 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2023-10-24 10:59:49 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2023-10-24 10:59:49 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: intent_live_chat | previous action name: action_listen
+[state 2] user intent: intent_live_chat | previous action name: utter_live_chat
+[state 3] user intent: intent_live_chat | previous action name: utter_live_chat_feedback
+[state 4] user intent: intent_core_yes | previous action name: action_listen
+[state 5] user intent: intent_core_yes | previous action name: utter_closing_type_below
+[state 6] user intent: intent_core_yes | previous action name: form_closing_feedback | slots: {'closing_feedback': (1.0,)}
+[state 7] user intent: intent_core_yes | previous action name: utter_closing_share_feedback | slots: {'closing_feedback': (1.0,)}
+2023-10-24 10:59:49 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'utter_closing_finally'.
+2023-10-24 10:59:49 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2023-10-24 10:59:49 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'action_listen' based on user intent.
+2023-10-24 10:59:49 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2023-10-24 10:59:49 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2023-10-24 10:59:49 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:49 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                   are you a human?
+                                                                                        intent: intent_live_chat 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_live_chat 1.00
+      I don't support live chat, but you can leave feedback for my team to review.
+      utter_live_chat_feedback 1.00
+      Would you like to submit any feedback?
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                                                yes
+                                                                                         intent: intent_core_yes 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    utter_closing_type_below 0.93
+      Great. You can type in your feedback below and I'll share it with my team.
+      form_closing_feedback 0.92
+      active_loop{"name": "form_closing_feedback"}
+      slot{"requested_slot": "closing_feedback"}
+      slot{"closing_feedback": "stuff"}
+      slot{"requested_slot": null}
+      active_loop{"name": null}
+      utter_closing_share_feedback 1.00
+       I'll share that with my team to review.
+
+
+Current slots:
+        closing_feedback: stuff, requested_slot: None, session_started_metadata: None
+
+------
+2023-10-24 10:59:50 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? The bot wants to run 'utter_closing_finally', correct? Yes
+2023-10-24 10:59:50 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:50 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:50 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:50 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:50 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:50 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:50 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:50 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:59:50 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=utter_closing_finally rasa_events=[BotUttered('My team is continually training me so that I'm able to expand the ways I can help you. Your interactions and feedback are key to my ability to grow and learn.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_closing_finally"}, 1698166790.782928)]
+2023-10-24 10:59:50 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:50 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:50 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:50 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:50 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:50 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc710e81f0>}, targets: ['select_prediction'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:59:50 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2023-10-24 10:59:50 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:59:50 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2023-10-24 10:59:50 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'utter_closing_type_below'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'form_closing_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'utter_closing_share_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'utter_closing_finally'}}]
+2023-10-24 10:59:50 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2023-10-24 10:59:50 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2023-10-24 10:59:50 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: intent_live_chat | previous action name: action_listen
+[state 2] user intent: intent_live_chat | previous action name: utter_live_chat
+[state 3] user intent: intent_live_chat | previous action name: utter_live_chat_feedback
+[state 4] user intent: intent_core_yes | previous action name: action_listen
+[state 5] user intent: intent_core_yes | previous action name: utter_closing_type_below
+[state 6] user intent: intent_core_yes | previous action name: form_closing_feedback | slots: {'closing_feedback': (1.0,)}
+[state 7] user intent: intent_core_yes | previous action name: utter_closing_share_feedback | slots: {'closing_feedback': (1.0,)}
+[state 8] user intent: intent_core_yes | previous action name: utter_closing_finally | slots: {'closing_feedback': (1.0,)}
+2023-10-24 10:59:50 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'utter_closing_anything_else'.
+2023-10-24 10:59:50 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2023-10-24 10:59:50 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'action_listen' based on user intent.
+2023-10-24 10:59:50 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2023-10-24 10:59:50 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2023-10-24 10:59:50 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:50 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+------
+Chat History
+
+ #    Bot                                                                                                                                                                                    You
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                                                                                                     are you a human?
+                                                                                                                                                                          intent: intent_live_chat 1.00
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_live_chat 1.00
+      I don't support live chat, but you can leave feedback for my team to review.
+      utter_live_chat_feedback 1.00
+      Would you like to submit any feedback?
+      action_listen 1.00
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                                                                                                                                  yes
+                                                                                                                                                                           intent: intent_core_yes 1.00
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    utter_closing_type_below 0.93
+      Great. You can type in your feedback below and I'll share it with my team.
+      form_closing_feedback 0.92
+      active_loop{"name": "form_closing_feedback"}
+      slot{"requested_slot": "closing_feedback"}
+      slot{"closing_feedback": "stuff"}
+      slot{"requested_slot": null}
+      active_loop{"name": null}
+      utter_closing_share_feedback 1.00
+       I'll share that with my team to review.
+      utter_closing_finally 1.00
+      My team is continually training me so that I'm able to expand the ways I can help you. Your interactions and feedback are key to my ability to grow and learn.
+
+
+Current slots:
+        closing_feedback: stuff, requested_slot: None, session_started_metadata: None
+
+------
+2023-10-24 10:59:50 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? The bot wants to run 'utter_closing_anything_else', correct? Yes
+2023-10-24 10:59:51 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:51 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:51 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:51 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:51 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:51 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:51 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:51 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:59:51 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=utter_closing_anything_else rasa_events=[BotUttered('Is there anything else I can help you with today?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_closing_anything_else"}, 1698166791.6247532)]
+2023-10-24 10:59:51 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:51 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:51 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:51 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:51 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:51 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc710e81f0>}, targets: ['select_prediction'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:59:51 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2023-10-24 10:59:51 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:59:51 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2023-10-24 10:59:51 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'utter_closing_type_below'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'form_closing_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'utter_closing_share_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'utter_closing_finally'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'utter_closing_anything_else'}}]
+2023-10-24 10:59:51 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2023-10-24 10:59:51 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2023-10-24 10:59:51 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: intent_live_chat | previous action name: action_listen
+[state 2] user intent: intent_live_chat | previous action name: utter_live_chat
+[state 3] user intent: intent_live_chat | previous action name: utter_live_chat_feedback
+[state 4] user intent: intent_core_yes | previous action name: action_listen
+[state 5] user intent: intent_core_yes | previous action name: utter_closing_type_below
+[state 6] user intent: intent_core_yes | previous action name: form_closing_feedback | slots: {'closing_feedback': (1.0,)}
+[state 7] user intent: intent_core_yes | previous action name: utter_closing_share_feedback | slots: {'closing_feedback': (1.0,)}
+[state 8] user intent: intent_core_yes | previous action name: utter_closing_finally | slots: {'closing_feedback': (1.0,)}
+[state 9] user intent: intent_core_yes | previous action name: utter_closing_anything_else | slots: {'closing_feedback': (1.0,)}
+2023-10-24 10:59:51 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'action_listen'.
+2023-10-24 10:59:51 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2023-10-24 10:59:51 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'action_listen' based on user intent.
+2023-10-24 10:59:51 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2023-10-24 10:59:51 DEBUG    rasa.core.policies.ensemble  - Predicted next action using RulePolicy.
+2023-10-24 10:59:51 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:51 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+------
+Chat History
+
+ #    Bot                                                                                                                                                                                    You
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                                                                                                     are you a human?
+                                                                                                                                                                          intent: intent_live_chat 1.00
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_live_chat 1.00
+      I don't support live chat, but you can leave feedback for my team to review.
+      utter_live_chat_feedback 1.00
+      Would you like to submit any feedback?
+      action_listen 1.00
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                                                                                                                                  yes
+                                                                                                                                                                           intent: intent_core_yes 1.00
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    utter_closing_type_below 0.93
+      Great. You can type in your feedback below and I'll share it with my team.
+      form_closing_feedback 0.92
+      active_loop{"name": "form_closing_feedback"}
+      slot{"requested_slot": "closing_feedback"}
+      slot{"closing_feedback": "stuff"}
+      slot{"requested_slot": null}
+      active_loop{"name": null}
+      utter_closing_share_feedback 1.00
+       I'll share that with my team to review.
+      utter_closing_finally 1.00
+      My team is continually training me so that I'm able to expand the ways I can help you. Your interactions and feedback are key to my ability to grow and learn.
+      utter_closing_anything_else 1.00
+      Is there anything else I can help you with today?
+
+
+Current slots:
+        closing_feedback: stuff, requested_slot: None, session_started_metadata: None
+
+------
+2023-10-24 10:59:51 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? The bot wants to run 'action_listen', correct? Yes
+2023-10-24 10:59:52 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:52 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:52 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:52 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:52 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:52 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:52 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:52 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:59:52 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=action_listen rasa_events=[]
+2023-10-24 10:59:52 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:52 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:52 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:53 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:53 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? Your input -> yes
+2023-10-24 10:59:54 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:54 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:54 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:54 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:54 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x7fcc70f1baf0>], '__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc71ee7400>}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:59:54 DEBUG    rasa.engine.graph  - Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2023-10-24 10:59:54 DEBUG    rasa.engine.graph  - Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2023-10-24 10:59:54 DEBUG    rasa.engine.graph  - Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2023-10-24 10:59:54 DEBUG    rasa.engine.graph  - Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2023-10-24 10:59:54 DEBUG    rasa.engine.graph  - Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2023-10-24 10:59:54 DEBUG    rasa.engine.graph  - Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2023-10-24 10:59:54 DEBUG    rasa.engine.graph  - Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2023-10-24 10:59:54 DEBUG    rasa.engine.graph  - Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2023-10-24 10:59:54 DEBUG    rasa.engine.graph  - Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2023-10-24 10:59:54 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2023-10-24 10:59:54 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2023-10-24 10:59:54 DEBUG    rasa.engine.graph  - Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2023-10-24 10:59:54 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:59:54 DEBUG    rasa.engine.graph  - Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2023-10-24 10:59:54 DEBUG    rasa.core.processor  - [debug    ] processor.message.parse        parse_data_entities=[] parse_data_intent={'name': 'intent_core_yes', 'confidence': 1.0} parse_data_text=yes
+2023-10-24 10:59:54 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 29 events.
+2023-10-24 10:59:54 DEBUG    rasa.core.actions.action  - Validating extracted slots:
+2023-10-24 10:59:54 DEBUG    rasa.core.processor  - [debug    ] processor.extract.slots        action_extract_slot=action_extract_slots len_extraction_events=0 rasa_events=[]
+2023-10-24 10:59:54 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:54 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:54 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? Your NLU model classified 'yes' with intent 'intent_core_yes' and there are no entities, is this correct? Yes
+2023-10-24 10:59:56 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:56 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:56 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc8ce807c0>}, targets: ['select_prediction'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:59:56 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2023-10-24 10:59:56 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:59:56 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2023-10-24 10:59:56 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'utter_closing_type_below'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'form_closing_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'utter_closing_share_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'utter_closing_finally'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'utter_closing_anything_else'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'action_listen'}}]
+2023-10-24 10:59:56 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2023-10-24 10:59:56 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2023-10-24 10:59:56 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: intent_live_chat | previous action name: action_listen
+[state 2] user intent: intent_live_chat | previous action name: utter_live_chat
+[state 3] user intent: intent_live_chat | previous action name: utter_live_chat_feedback
+[state 4] user intent: intent_core_yes | previous action name: action_listen
+[state 5] user intent: intent_core_yes | previous action name: utter_closing_type_below
+[state 6] user intent: intent_core_yes | previous action name: form_closing_feedback | slots: {'closing_feedback': (1.0,)}
+[state 7] user intent: intent_core_yes | previous action name: utter_closing_share_feedback | slots: {'closing_feedback': (1.0,)}
+[state 8] user intent: intent_core_yes | previous action name: utter_closing_finally | slots: {'closing_feedback': (1.0,)}
+[state 9] user intent: intent_core_yes | previous action name: utter_closing_anything_else | slots: {'closing_feedback': (1.0,)}
+[state 10] user text: yes | previous action name: action_listen | slots: {'closing_feedback': (1.0,)}
+2023-10-24 10:59:56 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2023-10-24 10:59:56 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: intent_live_chat | previous action name: action_listen
+[state 2] user intent: intent_live_chat | previous action name: utter_live_chat
+[state 3] user intent: intent_live_chat | previous action name: utter_live_chat_feedback
+[state 4] user intent: intent_core_yes | previous action name: action_listen
+[state 5] user intent: intent_core_yes | previous action name: utter_closing_type_below
+[state 6] user intent: intent_core_yes | previous action name: form_closing_feedback | slots: {'closing_feedback': (1.0,)}
+[state 7] user intent: intent_core_yes | previous action name: utter_closing_share_feedback | slots: {'closing_feedback': (1.0,)}
+[state 8] user intent: intent_core_yes | previous action name: utter_closing_finally | slots: {'closing_feedback': (1.0,)}
+[state 9] user intent: intent_core_yes | previous action name: utter_closing_anything_else | slots: {'closing_feedback': (1.0,)}
+[state 10] user intent: intent_core_yes | previous action name: action_listen | slots: {'closing_feedback': (1.0,)}
+2023-10-24 10:59:56 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2023-10-24 10:59:56 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2023-10-24 10:59:56 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'utter_core_how_can_i_help' based on user intent.
+2023-10-24 10:59:56 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2023-10-24 10:59:56 DEBUG    rasa.core.policies.ensemble  - Made prediction using user intent.
+2023-10-24 10:59:56 DEBUG    rasa.core.policies.ensemble  - Added `DefinePrevUserUtteredFeaturization(False)` event.
+2023-10-24 10:59:56 DEBUG    rasa.core.policies.ensemble  - Predicted next action using TEDPolicy.
+2023-10-24 10:59:56 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:56 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+------
+Chat History
+
+
+
+ #    Bot                                                                                                                                                                                    You
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                                                                                                     are you a human?
+                                                                                                                                                                          intent: intent_live_chat 1.00
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_live_chat 1.00
+      I don't support live chat, but you can leave feedback for my team to review.
+      utter_live_chat_feedback 1.00
+      Would you like to submit any feedback?
+      action_listen 1.00
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                                                                                                                                  yes
+                                                                                                                                                                           intent: intent_core_yes 1.00
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    utter_closing_type_below 0.93
+      Great. You can type in your feedback below and I'll share it with my team.
+      form_closing_feedback 0.92
+      active_loop{"name": "form_closing_feedback"}
+      slot{"requested_slot": "closing_feedback"}
+      slot{"closing_feedback": "stuff"}
+      slot{"requested_slot": null}
+      active_loop{"name": null}
+      utter_closing_share_feedback 1.00
+       I'll share that with my team to review.
+      utter_closing_finally 1.00
+      My team is continually training me so that I'm able to expand the ways I can help you. Your interactions and feedback are key to my ability to grow and learn.
+      utter_closing_anything_else 1.00
+      Is there anything else I can help you with today?
+      action_listen 1.00
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                                                                                                                  yes
+                                                                                                                                                                           intent: intent_core_yes 1.00
+Current slots:
+        closing_feedback: stuff, requested_slot: None, session_started_metadata: None
+
+------
+2023-10-24 10:59:56 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? The bot wants to run 'utter_core_how_can_i_help', correct? Yes
+2023-10-24 10:59:58 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:58 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:58 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:58 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:58 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:58 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:58 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:58 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:59:58 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=utter_core_how_can_i_help rasa_events=[BotUttered('How can I help you today?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_core_how_can_i_help"}, 1698166798.1126807)]
+2023-10-24 10:59:58 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:58 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:58 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:58 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:58 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:58 DEBUG    rasa.engine.runner.dask  - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x7fcc70de7160>}, targets: ['select_prediction'] and ExecutionContext(model_id='3b1ceede0a7e4f0b901cb770e2867739', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2023-10-24 10:59:58 DEBUG    rasa.engine.graph  - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2023-10-24 10:59:58 DEBUG    rasa.engine.graph  - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2023-10-24 10:59:58 DEBUG    rasa.engine.graph  - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2023-10-24 10:59:58 DEBUG    rasa.core.policies.memoization  - [debug    ] memoization.predict.actions    tracker_states=[{}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat'}}, {'user': {'intent': 'intent_live_chat'}, 'prev_action': {'action_name': 'utter_live_chat_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_core_yes'}, 'prev_action': {'action_name': 'utter_closing_type_below'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'form_closing_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'utter_closing_share_feedback'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'utter_closing_finally'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'utter_closing_anything_else'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'intent_core_yes'}, 'slots': {'closing_feedback': (1.0,)}, 'prev_action': {'action_name': 'utter_core_how_can_i_help'}}]
+2023-10-24 10:59:58 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2023-10-24 10:59:58 DEBUG    rasa.engine.graph  - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2023-10-24 10:59:58 DEBUG    rasa.core.policies.rule_policy  - [debug    ] rule_policy.actions.find       current_states=
+[state 1] user intent: intent_live_chat | previous action name: action_listen
+[state 2] user intent: intent_live_chat | previous action name: utter_live_chat
+[state 3] user intent: intent_live_chat | previous action name: utter_live_chat_feedback
+[state 4] user intent: intent_core_yes | previous action name: action_listen
+[state 5] user intent: intent_core_yes | previous action name: utter_closing_type_below
+[state 6] user intent: intent_core_yes | previous action name: form_closing_feedback | slots: {'closing_feedback': (1.0,)}
+[state 7] user intent: intent_core_yes | previous action name: utter_closing_share_feedback | slots: {'closing_feedback': (1.0,)}
+[state 8] user intent: intent_core_yes | previous action name: utter_closing_finally | slots: {'closing_feedback': (1.0,)}
+[state 9] user intent: intent_core_yes | previous action name: utter_closing_anything_else | slots: {'closing_feedback': (1.0,)}
+[state 10] user intent: intent_core_yes | previous action name: action_listen | slots: {'closing_feedback': (1.0,)}
+[state 11] user intent: intent_core_yes | previous action name: utter_core_how_can_i_help | slots: {'closing_feedback': (1.0,)}
+2023-10-24 10:59:58 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2023-10-24 10:59:58 DEBUG    rasa.engine.graph  - Node 'run_TEDPolicy2' running 'TEDPolicy.predict_action_probabilities'.
+2023-10-24 10:59:58 DEBUG    rasa.core.policies.ted_policy  - TED predicted 'action_listen' based on user intent.
+2023-10-24 10:59:58 DEBUG    rasa.engine.graph  - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2023-10-24 10:59:58 DEBUG    rasa.core.policies.ensemble  - Predicted next action using TEDPolicy.
+2023-10-24 10:59:58 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:58 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+------
+Chat History
+
+ #    Bot                                                                                                                                                                                    You
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                                                                                                     are you a human?
+                                                                                                                                                                          intent: intent_live_chat 1.00
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_live_chat 1.00
+      I don't support live chat, but you can leave feedback for my team to review.
+      utter_live_chat_feedback 1.00
+      Would you like to submit any feedback?
+      action_listen 1.00
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                                                                                                                                  yes
+                                                                                                                                                                           intent: intent_core_yes 1.00
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    utter_closing_type_below 0.93
+      Great. You can type in your feedback below and I'll share it with my team.
+      form_closing_feedback 0.92
+      active_loop{"name": "form_closing_feedback"}
+      slot{"requested_slot": "closing_feedback"}
+      slot{"closing_feedback": "stuff"}
+      slot{"requested_slot": null}
+      active_loop{"name": null}
+      utter_closing_share_feedback 1.00
+       I'll share that with my team to review.
+      utter_closing_finally 1.00
+      My team is continually training me so that I'm able to expand the ways I can help you. Your interactions and feedback are key to my ability to grow and learn.
+      utter_closing_anything_else 1.00
+      Is there anything else I can help you with today?
+      action_listen 1.00
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                                                                                                                  yes
+                                                                                                                                                                           intent: intent_core_yes 1.00
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    utter_core_how_can_i_help 0.95
+      How can I help you today?
+
+
+Current slots:
+        closing_feedback: stuff, requested_slot: None, session_started_metadata: None
+
+------
+2023-10-24 10:59:58 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? The bot wants to run 'action_listen', correct? Yes
+2023-10-24 10:59:59 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:59 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:59 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:59 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:59 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:59 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:59 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:59 DEBUG    rasa.core.processor  - [debug    ] processor.actions.policy_prediction prediction_events=[]
+2023-10-24 10:59:59 DEBUG    rasa.core.processor  - [debug    ] processor.actions.log          action_name=action_listen rasa_events=[]
+2023-10-24 10:59:59 DEBUG    rasa.core.tracker_store  - No event broker configured. Skipping streaming events.
+2023-10-24 10:59:59 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'b72cc98061c34c7bac86ada8dc22aa00'.
+2023-10-24 10:59:59 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:59 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+2023-10-24 10:59:59 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'b72cc98061c34c7bac86ada8dc22aa00'
+? Your input ->

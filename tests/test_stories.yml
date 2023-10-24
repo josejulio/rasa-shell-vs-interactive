@@ -1,0 +1,33 @@
+version: "3.1"
+
+stories:
+- story: are you a human?
+  steps:
+  - user: |
+      are you a human?
+    intent: intent_live_chat
+  - action: utter_live_chat
+  - action: utter_live_chat_feedback
+  - user: |
+      yes
+    intent: intent_core_yes
+  - action: utter_closing_type_below
+  - action: form_closing_feedback
+  - active_loop: form_closing_feedback
+  - user: |
+      This is my feedback...
+    intent: intent_core_yes # Just to provide an intent for the test
+  - slot_was_set:
+      - closing_feedback: "This is my feedback..."
+  - action: form_closing_feedback
+  - active_loop: null
+#  - slot_was_set:
+#      - requested_slot: null
+  - action: utter_closing_share_feedback
+  - action: utter_closing_finally
+  - action: utter_closing_anything_else
+  - user: |
+      yes
+    intent: intent_core_yes
+  - action: utter_core_how_can_i_help
+
