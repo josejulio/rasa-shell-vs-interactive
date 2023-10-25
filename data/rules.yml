@@ -1,6 +1,14 @@
 version: "3.1"
 
 rules:
+  - rule: Would you like to give feedback - Yes
+    steps:
+      - action: utter_live_chat_feedback
+      - intent: intent_core_yes
+      - action: utter_closing_type_below
+      - action: form_closing_feedback
+      - active_loop: form_closing_feedback
+
   - rule: Finished feedback
     condition:
         - active_loop: form_closing_feedback
