@@ -8,14 +8,6 @@ stories:
         - action: utter_live_chat
         - action: utter_live_chat_feedback
 
-  - story: User wants to leave feedback about not speaking to an agent
-    steps:
-        - action: utter_live_chat_feedback
-        - intent: intent_core_yes
-        - action: utter_closing_type_below
-        - action: form_closing_feedback
-        - active_loop: form_closing_feedback
-
   - story: User doesn't want to leave feedback after not speaking to an agent
     steps:
         - action: utter_live_chat_feedback
